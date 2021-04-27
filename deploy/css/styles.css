@@ -365,6 +365,10 @@ ul li {
   list-style: none;
 }
 
+.hide {
+  display: none;
+}
+
 /* =============
     Typography
 ============= */
@@ -408,24 +412,32 @@ textarea {
 /* =============
     Footer
 ============= */
-#shapes {
+#svg-container {
   display: grid;
-  grid-template-columns: auto 60% auto;
-  grid-template-areas: ". shapes .";
+  grid-template-columns: auto 80% auto;
+  grid-template-areas: ". svg-container .";
   height: 100vh;
 }
-#shapes > div {
-  grid-area: shapes;
+@media (min-width: 768px) {
+  #svg-container {
+    grid-template-columns: auto 70% auto;
+  }
 }
-#shapes > div #red-circle {
-  height: 200px;
-  width: 200px;
-  background-color: #e64307;
-  border-radius: 100%;
-  margin-left: 300px;
+@media (min-width: 992px) {
+  #svg-container {
+    grid-template-columns: auto 60% auto;
+  }
 }
-#shapes > div #blue-square {
-  height: 200px;
-  width: 200px;
-  background-color: #05deff;
+@media (min-width: 1200px) {
+  #svg-container {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#svg-container > div {
+  display: flex;
+  align-items: center;
+  grid-area: svg-container;
+}
+#svg-container > div svg {
+  width: 100%;
 }

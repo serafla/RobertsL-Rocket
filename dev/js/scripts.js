@@ -1,5 +1,20 @@
 import { gsap } from "gsap";
+import { GSDevTools } from "gsap/GSDevTools";
 
-gsap.to("#red-circle", { duration: 4, x: 200 });
 
-gsap.from("#blue-square", { duration: 4, scale: 2, alpha: 0, delay: 2, repeat: -1, yoyo: true });
+import { zoomTL } from "./zoomIn"
+import { fadeInTL } from "./fadeIn"
+import { slideInTL } from "./slideIn"
+
+gsap.registerPlugin(GSDevTools);
+
+let mainTL = gsap.timeline();
+
+mainTL.add(zoomTL)
+        .add(slideInTL)
+        .add(fadeInTL);
+
+
+// console.log(numberThing);
+
+GSDevTools.create();
