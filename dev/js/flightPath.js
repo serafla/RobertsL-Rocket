@@ -11,9 +11,10 @@ export let flightTL = gsap.timeline();
 flightTL.to("#RocketFolder", {
     duration: 7,
     motionPath: {
+        y: "-=100",
         path: "#FlightPath",
         align:"#FlightPath",
-        alignOrigin: [0.5, 0.5],
+        alignOrigin: [0.1, 0.1],
         autoRotate: 90
     },
     ease: "none",

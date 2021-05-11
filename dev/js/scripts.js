@@ -18,14 +18,17 @@ mainTL.add(fadeInTL)
         .add(zoomTL)
         .add(slideInTL, "-=3")
         .add(rotateInTL)
+      
         .add(rocketLaunchTL)
+       
         .add(flightTL)
         .add(moonZoomInTL)
+        
         .add(landingTL)
-        .addLabel("marker")
+       
         .add(endingTL);
 
-        mainTL.play("marker");
+       
 
 
      

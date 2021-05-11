@@ -23,7 +23,7 @@ rocketLaunchTL.from("#RocketFolder", { alpha: 1, y:1500, duration:2}, "rocketclo
                 .to("#MountainsFolder",{duration:5, y:"+=700", ease: "power3.in"},'upAndAway')
                 .to("#Sky",{duration:5, alpha: 0, delay: 3},'upAndAway')
                 .to("#CircleStarsFolder",{duration:5, y: "+=100", delay: 4},'upAndAway')
-                .to("#RocketFolder",{duration:3, y:"+=400"})
+                .to("#RocketFolder",{duration:3, y:"+=400", x:"-=200", scale: 0.75})
 
 
 export let flamesTL = gsap.timeline({paused:true});
